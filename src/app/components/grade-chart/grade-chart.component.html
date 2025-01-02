@@ -1,0 +1,44 @@
+<div class="p-3 rounded-xsf shapeBorder w-[329px] h-[280px]">
+    <div class="flex items-center justify-between mb-4">
+      <div class="flex items-center text-center gap-[6px]">
+        <h2 class="font-[600] text-[12.2px] leading-[14.35px] text-[#33333D]">By Grades</h2>
+        <p class="font-[400] text-[10.49px] leading-[12.33px] text-[#898989]">Year to Date (YTD)</p>
+      </div>
+      <div class="flex items-center gap-[3px]">
+        <div class="w-[9.22px] h-[5.53px] rounded-[0.87px] bg-primary"></div>
+        <p class="font-[400] text-[8.72px] leading-[10.25px] text-[#33333D]">Saudi</p>
+    </div>
+    </div>
+  
+    <div class="flex flex-col justify-center items-center">
+      <canvas id="barChart" width="294" height="145"></canvas>
+        <div class="flex justify-between w-[80%] mt-1">
+            @for (label of labels; track $index) {
+            <p class="font-[400] text-[12.2px] leading-[14.35px] text-[#202020]">{{label}}</p>
+            }
+        </div>
+    </div>
+  
+    <div class="flex justify-between items-center mt-3">
+      <button
+        class="flex items-center gap-[3.5px] py-[5.24px] px-[6.99px] shapeBorder rounded-[4.09px] font-[400] text-[10.49px] leading-[12.33px] text-[#17181A]"
+      >
+        <span>&larr;</span> Previous
+      </button>
+      <button
+        class="flex items-center gap-[3.5px] py-[5.24px] px-[6.99px] shapeBorder rounded-[4.09px] font-[400] text-[10.49px] leading-[12.33px] text-[#17181A]"
+      >
+        Next <span>&rarr;</span>
+      </button>
+    </div>
+  
+    <div class="flex gap-7 mt-2 text-sm">
+      <div class="flex items-center gap-3 font-[400] text-[14px] leading-[20px] text-[#626D7C]">
+        <div class="w-3 h-3 bg-primary"></div> Scheduled
+      </div>
+      <div class="flex items-center gap-3 font-[400] text-[14px] leading-[20px] text-[#626D7C]">
+        <div class="w-3 h-3 bg-[#36AFA8]"></div> Used
+      </div>
+    </div>
+  </div>
+  

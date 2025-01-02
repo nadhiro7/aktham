@@ -1,0 +1,44 @@
+<div class="relative shapeBorder  h-[391px] rounded-mdf pl-8 pt-5">
+    <div>
+        <h2 class="font-[600] text-[20px] leading-[28px] manrope">Scheduled Leaves</h2>
+        <p class="font-[600] text-[16px] leading-[24px] text-[#626D7C] manrope">Trends of the employees scheduled leaves</p>
+    </div>
+  <div class="w-[541px] h-[261px] p-[10px] gap-6 flex flex-col absolute bottom-3">
+    <div class="grid grid-cols-4 gap-3 mb-6 w-[531px] h-[190px]">
+        <div
+          *ngFor="let month of months"
+          [ngStyle]="{ backgroundColor: month.color }"
+          class="flex items-center justify-center font-[500] text-[22.07px] leading-[31.53px] text-[#fff] manrope py-4 rounded-[4px] shadow"
+        >
+          {{ month.name }}
+        </div>
+      </div>
+      <div class="flex items-center gap-[14px] w-max">
+        <span class="font-[400] text-[14px] leading-[18.46px] text-[#626D7C]">Low</span>
+        <div class="flex-grow h-4 w-[259px] bg-primary gradient"></div>
+        <span class="font-[400] text-[14px] leading-[18.46px] text-[#626D7C]">High</span>
+      </div>
+  </div>
+  <!-- List Section -->
+  <div class=" absolute flex left-[646px] top-[100px] gap-8">
+    <div class="flex w-[162px] flex-col ">
+        <div *ngFor="let month of firstSixMonths" class="flex w-[162px] gap-[7px] pt-2 flex-col mr-8">
+          <div class="flex justify-between">
+            <span class="font-[500] text-[16px] leading-[24px] text-[#626D7C] manrope">{{ month.name }}</span>
+          <span class="font-[500] text-[16px] leading-[24px] manrope">123K Days</span>
+          </div>
+          <hr class="w-full h-[1px] text-[#C3C9D1]" />
+        </div>
+      </div>
+      <div class="flex  w-[162px] flex-col">
+        <div *ngFor="let month of lastSixMonths" class="flex w-[162px] gap-[7px] pt-2 flex-col mr-8">
+            <div class="flex justify-between">
+              <span class="font-[500] text-[16px] leading-[24px] text-[#626D7C] manrope">{{ month.name }}</span>
+            <span class="font-[500] text-[16px] leading-[24px] manrope">123K Days</span>
+            </div>
+            <hr class="w-full  h-[1px] text-[#C3C9D1]" />
+          </div>
+      </div>
+  </div>
+</div>
+

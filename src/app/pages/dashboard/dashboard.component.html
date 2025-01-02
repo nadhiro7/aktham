@@ -1,0 +1,28 @@
+<section class="ml-[282px]  mt-[30px] flex flex-col max-w-[1440px] gap-6  mb-20">
+    <div class="flex w-[1119px] font-[600] text-[13px] leading-[15.73px] items-center cursor-pointer">
+        <img src="saham.svg" />
+        <p>Back to Services Category</p>
+    </div>
+    <div class="bg-[#fff] w-[1119px] h-[2230px] rounded-[10px] px-[40px] relative flex flex-col gap-5">
+        <app-employer-management />
+        <div class="mt-5 mb-3">
+            <button class="py-[10.36px] px-[14.8px] w-[156px] rounded-tl-[8.88px] rounded-bl-[8.88px] btn-active">Annual Leave</button>
+            <button class="py-[10.36px] px-[14.8px] w-[162px] btn">Sick Leave</button>
+            <button class="py-[10.36px] px-[14.8px] w-[178px] rounded-tr-[8.88px] rounded-br-[8.88px] btn">Maternity Leave</button>
+        </div>
+        <div class="mb-2 flex justify-between">
+            <app-leave-used />
+            <div class="flex flex-col h-[230px] justify-between">
+                <app-card [icon]="'vote-nay.svg'" [text]="'Leave Rejections'" [value]="'23%'" />
+                <app-card [icon]="'paste.svg'" [text]="'Carryover Leave'" [value]="'123K Days'" />
+            </div>
+            <app-schedule-card />
+        </div>
+        <app-schedule-leaves />
+        <div class=" flex justify-between">
+            <app-grade-chart />
+            <app-departement-chart />
+        </div>
+        <app-users-table />
+    </div>
+</section>

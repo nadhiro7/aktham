@@ -1,0 +1,22 @@
+<aside class="w-[270px] h-[1232px] absolute top-0 left-0">
+    <div class="close absolute flex items-center justify-center top-[42px] left-[230px] cursor-pointer">
+        <img src="arrow-rtl.svg" class="" alt="">
+    </div>
+    <div class="h-full w-[252px] bg-sideBarBg flex flex-col relative">
+        <a href="/"><img src="akthamLogo.svg"  class="h-[67px] w-[188px] absolute left-[31px] top-[28px]"/></a>
+        <div class="w-[218px] h-[52px] bg-[#fff] absolute top-[134px] left-[18px] rounded-xl px-3 py-[14px] flex gap-[10px] items-center">
+            <img src="wd.svg" class="w-6 h-6"/>
+            <div class="font-[500] text-[14px] leading-[16.94px] cursor-pointer">
+                Workforce Dynamic
+            </div>
+            <img src="shape.svg" class="h-[5px] w-[10px]"/>
+        </div>
+        <div class="absolute top-[218px] w-full">
+            <ul class="flex flex-col gap-[7px] font-[400] text-[16px] leading-[19.36px] text-[#BABABA] w-full">
+                @for (link of links; track $index) {
+                    <app-side-bar-link [name]="link.name" [icon]="link.icon" [url]="link.url" [isActive]="link.isActive" />
+                }
+            </ul>
+        </div>
+    </div>
+</aside>

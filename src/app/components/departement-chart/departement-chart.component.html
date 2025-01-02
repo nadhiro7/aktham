@@ -1,0 +1,46 @@
+<div class="p-4 shapeBorder w-[688px] h-[280px] rounded-xsf">
+    <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center text-center gap-[6px]">
+          <h2 class="font-[600] text-[12.2px] leading-[14.35px] text-[#33333D]">By Department</h2>
+          <p class="font-[400] text-[10.49px] leading-[12.33px] text-[#898989]">Year to Date (YTD)</p>
+        </div>
+      </div>
+    <div class="mt-6">
+      <div *ngFor="let department of departments" class="mb-4">
+        <div class="flex items-center">
+          <span class="w-20 font-[400] text-[12.2px] leading-[14.35px] text-[#202020]">{{ department.name }}</span>
+          <div class="relative flex-grow h-6 bg-gray-200 rounded">
+            <!-- Scheduled (Purple) -->
+            <div
+              class="absolute top-0 left-0 h-full bg-primary rounded-[0.46px]"
+              [style.width.%]="department.scheduled"
+            ></div>
+            <!-- Used (Teal) -->
+            <div
+              class="absolute top-0 h-full"
+              [style.left.%]="department.scheduled"
+              [style.width.%]="department.used"
+              [ngClass]="{
+                'rounded-[0.46px]': department.scheduled + department.used === 100
+              }"
+              style="background-color: #36AFA8"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex mt-5 justify-between ml-20">
+        @for (y of yMarkers; track $index) {
+            <p class="font-[400] leading-[5.54px] text-[10.49px] text-[#202020]">{{y}}%</p>
+        }
+      </div>
+    </div>
+    <div class="flex gap-7 mt-4 text-sm">
+        <div class="flex items-center gap-3 font-[400] text-[14px] leading-[20px] text-[#626D7C]">
+          <div class="w-3 h-3 bg-primary"></div> Scheduled
+        </div>
+        <div class="flex items-center gap-3 font-[400] text-[14px] leading-[20px] text-[#626D7C]">
+          <div class="w-3 h-3 bg-[#36AFA8]"></div> Used
+        </div>
+      </div>
+  </div>
+  

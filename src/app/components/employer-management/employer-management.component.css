@@ -1,0 +1,10 @@
+.btn {
+  font-weight: 400;
+  border: 1px solid #f4f4f4;
+  box-shadow: 0px 0.76px 3.5px 0px #d9e1e7cc;
+}
+.btn-active {
+  box-shadow: 0px 0.76px 3.5px 0px #662c9199;
+  font-weight: 700;
+  @apply text-primary;
+}

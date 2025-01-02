@@ -1,0 +1,8 @@
+.close {
+  box-shadow: 0px 0px 12px 0px #ada7a733;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 30;
+}
